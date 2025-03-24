@@ -11,9 +11,19 @@ class LoginPage extends StatefulWidget {
 class _LoginPageState extends State<LoginPage> {
   @override
   Widget build(BuildContext context) {
+    double screenWidth = MediaQuery.of(context).size.width;
+    double screenHeight = MediaQuery.of(context).size.height;
+
     return KeyboardVisibilityBuilder(
       builder: (context, isKeyboardVisible) {
-        return Scaffold();
+        return Scaffold(
+          resizeToAvoidBottomInset: true,
+          body: Container(
+            padding: const EdgeInsets.symmetric(horizontal: 20.0),
+            height: screenHeight,
+            width: screenWidth,
+          ),
+        );
       },
     );
   }
