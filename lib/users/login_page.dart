@@ -39,12 +39,15 @@ class _LoginPageState extends State<LoginPage> {
               ),
             ),
 
-            // Column for both expanded
+            // Column for Stack and Expanded
             child: Column(
               children: [
-                // First expanded here
-                Expanded(
-                  // Stack for both search icon and ebela text
+                // Padding around Stack
+                Padding(
+                  // 8% of screen height
+                  padding: EdgeInsets.only(top: screenHeight * 0.08),
+
+                  // Stack here
                   child: Stack(
                     children: [
                       Positioned.fill(
@@ -76,30 +79,43 @@ class _LoginPageState extends State<LoginPage> {
                               ),
                             ),
                           ),
-
-                          Text(
-                            'Welcome Back',
-                            style: GoogleFonts.inter(
-                              // 25% of screen width
-                              fontSize: screenWidth * 0.05,
-                              color: Colors.white,
-                              fontWeight: FontWeight.w800,
-                              letterSpacing: 0.3,
-                            ),
-                          ),
                         ],
                       ),
                     ],
                   ),
                 ),
 
-                // Second expanded here
+                // Expanded here
                 Expanded(
-                  child: Text(
-                    'data',
-                    style: TextStyle(
-                      color: Colors.white,
-                      fontSize: screenWidth * 0.05, // 5% of screen width
+                  // Padding around column
+                  child: Padding(
+                    // 4% of screen height
+                    padding: EdgeInsets.only(top: screenHeight * 0.04),
+
+                    // Column here
+                    child: Column(
+                      children: [
+                        // Welcome text here
+                        Text(
+                          'Welcome Back',
+                          style: GoogleFonts.inter(
+                            // 6% of screen width
+                            fontSize: screenWidth * 0.06,
+                            color: Colors.white,
+                            fontWeight: FontWeight.w600,
+                            letterSpacing: 0.3,
+                          ),
+                        ),
+
+                        Text(
+                          'data',
+                          style: TextStyle(
+                            color: Colors.white,
+                            // 5% of screen width
+                            fontSize: screenWidth * 0.05,
+                          ),
+                        ),
+                      ],
                     ),
                   ),
                 ),
