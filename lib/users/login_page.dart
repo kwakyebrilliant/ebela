@@ -96,15 +96,20 @@ class _LoginPageState extends State<LoginPage> {
                     // Column here
                     child: Column(
                       children: [
-                        // Welcome text here
-                        Text(
-                          'Welcome Back',
-                          style: GoogleFonts.inter(
-                            // 6% of screen width
-                            fontSize: screenWidth * 0.06,
-                            color: Colors.white,
-                            fontWeight: FontWeight.w600,
-                            letterSpacing: 0.3,
+                        // Padding around Welcome text here
+                        Padding(
+                          padding: const EdgeInsets.all(8.0),
+
+                          // Welcome text here
+                          child: Text(
+                            'Welcome Back',
+                            style: GoogleFonts.inter(
+                              // 6% of screen width
+                              fontSize: screenWidth * 0.06,
+                              color: Colors.white,
+                              fontWeight: FontWeight.w600,
+                              letterSpacing: 0.3,
+                            ),
                           ),
                         ),
 
