@@ -125,7 +125,7 @@ class _LoginPageState extends State<LoginPage> {
                                 labelText: 'Email Address',
                                 icon: Icons.email_outlined,
                                 obscureText: false,
-                                fontSize: screenWidth * 0.02,
+                                fontSize: screenWidth * 0.03,
                                 // controller: _emailController,
                                 validator: (value) {
                                   if (value == null || value.isEmpty) {

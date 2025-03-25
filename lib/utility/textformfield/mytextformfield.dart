@@ -31,14 +31,17 @@ class MyTextFormField extends StatelessWidget {
         fillColor: Color(0xFF1F6B3B).withValues(alpha: 0.4),
         filled: true,
         labelText: labelText,
-        labelStyle: GoogleFonts.inter(color: Color(0xFFFFFFFF), fontSize: 14.0),
+        labelStyle: GoogleFonts.inter(
+          color: Color(0xFFFFFFFF),
+          fontSize: fontSize,
+        ),
         prefixIcon: Padding(
           padding: const EdgeInsets.only(right: 8.0, left: 8.0),
-          child: Icon(icon, color: Theme.of(context).colorScheme.primary),
+          child: Icon(icon, color: Color(0xFFFFFFFF)),
         ),
         suffixIcon: Padding(
           padding: const EdgeInsets.only(right: 8.0, left: 8.0),
-          child: Icon(suffixIcon, color: Theme.of(context).colorScheme.primary),
+          child: Icon(suffixIcon, color: Color(0xFFFFFFFF)),
         ),
         enabledBorder: OutlineInputBorder(
           borderRadius: BorderRadius.circular(12.0),
@@ -46,7 +49,7 @@ class MyTextFormField extends StatelessWidget {
         ),
         focusedBorder: OutlineInputBorder(
           borderRadius: BorderRadius.circular(12.0),
-          borderSide: BorderSide(color: Theme.of(context).colorScheme.primary),
+          borderSide: BorderSide(color: Colors.transparent),
         ),
       ),
     );
