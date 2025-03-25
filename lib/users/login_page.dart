@@ -118,23 +118,34 @@ class _LoginPageState extends State<LoginPage> {
                           ),
                         ),
 
-                        Form(
-                          child: Column(
-                            children: [
-                              MyTextFormField(
-                                labelText: 'Email Address',
-                                icon: Icons.email_outlined,
-                                obscureText: false,
-                                fontSize: screenWidth * 0.03,
-                                // controller: _emailController,
-                                validator: (value) {
-                                  if (value == null || value.isEmpty) {
-                                    return 'Email is required';
-                                  }
-                                  return null;
-                                },
-                              ),
-                            ],
+                        // Padding around Form
+                        Padding(
+                          padding: EdgeInsets.symmetric(
+                            horizontal: screenWidth * 0.04,
+                            vertical: screenHeight * 0.02,
+                          ),
+
+                          // Form here
+                          child: Form(
+                            // Column for form contents
+                            child: Column(
+                              children: [
+                                // Email TextFormField
+                                MyTextFormField(
+                                  labelText: 'Email Address',
+                                  icon: Icons.email_outlined,
+                                  obscureText: false,
+                                  fontSize: screenWidth * 0.03,
+                                  // controller: _emailController,
+                                  validator: (value) {
+                                    if (value == null || value.isEmpty) {
+                                      return 'Email is required';
+                                    }
+                                    return null;
+                                  },
+                                ),
+                              ],
+                            ),
                           ),
                         ),
                       ],
