@@ -10,6 +10,7 @@ class MyTextFormField extends StatelessWidget {
     this.suffixIcon,
     this.controller,
     this.validator,
+    this.fontSize,
   });
 
   final dynamic labelText;
@@ -18,42 +19,34 @@ class MyTextFormField extends StatelessWidget {
   final dynamic obscureText;
   final dynamic controller;
   final dynamic validator;
+  final dynamic fontSize;
 
   @override
   Widget build(BuildContext context) {
-    return Padding(
-      padding: const EdgeInsets.only(top: 30.0),
-      child: TextFormField(
-        obscureText: obscureText,
-        controller: controller,
-        validator: validator,
-        decoration: InputDecoration(
-          enabledBorder: OutlineInputBorder(
-            borderSide: const BorderSide(color: Color(0xFF607D8B), width: 2.0),
-            borderRadius: BorderRadius.circular(12.0),
-          ),
-          focusedBorder: OutlineInputBorder(
-            borderSide: const BorderSide(color: Color(0xFF607D8B), width: 2.0),
-            borderRadius: BorderRadius.circular(12.0),
-          ),
-          fillColor: Theme.of(context).colorScheme.surface,
-          labelText: labelText,
-          labelStyle: GoogleFonts.inter(
-            color: Theme.of(context).colorScheme.primary,
-            fontSize: 14.0,
-          ),
-          prefixIcon: Padding(
-            padding: const EdgeInsets.only(right: 8.0, left: 8.0),
-            child: Icon(icon, color: Theme.of(context).colorScheme.primary),
-          ),
-          suffixIcon: Padding(
-            padding: const EdgeInsets.only(right: 8.0, left: 8.0),
-            child: Icon(
-              suffixIcon,
-              color: Theme.of(context).colorScheme.primary,
-            ),
-          ),
-          filled: true,
+    return TextFormField(
+      obscureText: obscureText,
+      controller: controller,
+      validator: validator,
+      decoration: InputDecoration(
+        fillColor: Color(0xFF1F6B3B).withValues(alpha: 0.4),
+        filled: true,
+        labelText: labelText,
+        labelStyle: GoogleFonts.inter(color: Color(0xFFFFFFFF), fontSize: 14.0),
+        prefixIcon: Padding(
+          padding: const EdgeInsets.only(right: 8.0, left: 8.0),
+          child: Icon(icon, color: Theme.of(context).colorScheme.primary),
+        ),
+        suffixIcon: Padding(
+          padding: const EdgeInsets.only(right: 8.0, left: 8.0),
+          child: Icon(suffixIcon, color: Theme.of(context).colorScheme.primary),
+        ),
+        enabledBorder: OutlineInputBorder(
+          borderRadius: BorderRadius.circular(12.0),
+          borderSide: BorderSide(color: Colors.transparent),
+        ),
+        focusedBorder: OutlineInputBorder(
+          borderRadius: BorderRadius.circular(12.0),
+          borderSide: BorderSide(color: Theme.of(context).colorScheme.primary),
         ),
       ),
     );
