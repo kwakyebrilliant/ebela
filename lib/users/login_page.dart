@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_keyboard_visibility/flutter_keyboard_visibility.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 class LoginPage extends StatefulWidget {
   const LoginPage({super.key});
@@ -41,6 +42,7 @@ class _LoginPageState extends State<LoginPage> {
             // Column for both expanded
             child: Column(
               children: [
+                // First expanded here
                 Expanded(
                   // Stack for both search icon and ebela text
                   child: Stack(
@@ -65,7 +67,7 @@ class _LoginPageState extends State<LoginPage> {
                           Center(
                             child: Text(
                               'ebela',
-                              style: TextStyle(
+                              style: GoogleFonts.inter(
                                 // 25% of screen width
                                 fontSize: screenWidth * 0.25,
                                 color: Colors.white,
@@ -76,8 +78,8 @@ class _LoginPageState extends State<LoginPage> {
                           ),
 
                           Text(
-                            'ebela',
-                            style: TextStyle(
+                            'Welcome Back',
+                            style: GoogleFonts.inter(
                               // 25% of screen width
                               fontSize: screenWidth * 0.05,
                               color: Colors.white,
@@ -90,6 +92,8 @@ class _LoginPageState extends State<LoginPage> {
                     ],
                   ),
                 ),
+
+                // Second expanded here
                 Expanded(
                   child: Text(
                     'data',
