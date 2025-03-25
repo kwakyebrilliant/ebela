@@ -61,6 +61,7 @@ class _LoginPageState extends State<LoginPage> {
                       Column(
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: [
+                          // ebela text centered
                           Center(
                             child: Text(
                               'ebela',
