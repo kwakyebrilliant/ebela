@@ -107,12 +107,13 @@ class _LoginPageState extends State<LoginPage> {
                           ),
                         ),
 
+                        // use email to register
                         Text(
-                          'data',
+                          'or use email to register',
                           style: TextStyle(
                             color: Colors.white,
-                            // 5% of screen width
-                            fontSize: screenWidth * 0.05,
+                            // 4% of screen width
+                            fontSize: screenWidth * 0.04,
                           ),
                         ),
                       ],
