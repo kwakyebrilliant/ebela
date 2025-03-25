@@ -1,3 +1,4 @@
+import 'package:ebela/utility/textformfield/mytextformfield.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_keyboard_visibility/flutter_keyboard_visibility.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -114,6 +115,25 @@ class _LoginPageState extends State<LoginPage> {
                             color: Colors.white,
                             // 4% of screen width
                             fontSize: screenWidth * 0.04,
+                          ),
+                        ),
+
+                        Form(
+                          child: Column(
+                            children: [
+                              MyTextFormField(
+                                labelText: 'Email Address',
+                                icon: Icons.email_outlined,
+                                obscureText: false,
+                                // controller: _emailController,
+                                validator: (value) {
+                                  if (value == null || value.isEmpty) {
+                                    return 'Email is required';
+                                  }
+                                  return null;
+                                },
+                              ),
+                            ],
                           ),
                         ),
                       ],
