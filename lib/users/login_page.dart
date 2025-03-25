@@ -122,7 +122,7 @@ class _LoginPageState extends State<LoginPage> {
                         Padding(
                           padding: EdgeInsets.symmetric(
                             horizontal: screenWidth * 0.04,
-                            vertical: screenHeight * 0.02,
+                            vertical: screenHeight * 0.03,
                           ),
 
                           // Form here
@@ -130,19 +130,49 @@ class _LoginPageState extends State<LoginPage> {
                             // Column for form contents
                             child: Column(
                               children: [
-                                // Email TextFormField
-                                MyTextFormField(
-                                  labelText: 'Email Address',
-                                  icon: Icons.email_outlined,
-                                  obscureText: false,
-                                  fontSize: screenWidth * 0.03,
-                                  // controller: _emailController,
-                                  validator: (value) {
-                                    if (value == null || value.isEmpty) {
-                                      return 'Email is required';
-                                    }
-                                    return null;
-                                  },
+                                // Padding around Email TextFormField
+                                Padding(
+                                  padding: EdgeInsets.only(
+                                    bottom: screenHeight * 0.02,
+                                  ),
+
+                                  // Email TextFormField
+                                  child: MyTextFormField(
+                                    labelText: 'Email Address',
+                                    icon: Icons.email_outlined,
+                                    obscureText: false,
+                                    fontSize: screenWidth * 0.03,
+                                    // controller: _emailController,
+                                    validator: (value) {
+                                      if (value == null || value.isEmpty) {
+                                        return 'Email is required';
+                                      }
+                                      return null;
+                                    },
+                                  ),
+                                ),
+
+                                // Padding around Password TextFormField
+                                Padding(
+                                  padding: EdgeInsets.only(
+                                    bottom: screenHeight * 0.02,
+                                  ),
+
+                                  // Password TextFormField
+                                  child: MyTextFormField(
+                                    labelText: 'Password',
+                                    icon: Icons.lock_outline,
+                                    suffixIcon: Icons.remove_red_eye_outlined,
+                                    obscureText: true,
+                                    fontSize: screenWidth * 0.03,
+                                    // controller: _passwordController,
+                                    validator: (value) {
+                                      if (value == null || value.isEmpty) {
+                                        return 'Password is required';
+                                      }
+                                      return null;
+                                    },
+                                  ),
                                 ),
                               ],
                             ),
