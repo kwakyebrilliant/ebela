@@ -11,6 +11,7 @@ class SmallButton extends StatelessWidget {
     this.height,
     this.width,
     this.fontColor,
+    this.borderWidth,
   });
 
   final dynamic text;
@@ -20,22 +21,25 @@ class SmallButton extends StatelessWidget {
   final dynamic height;
   final dynamic width;
   final dynamic fontColor;
+  final dynamic borderWidth;
 
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
       onTap: function,
-      child: ClipRRect(
-        borderRadius: BorderRadius.circular(12.0),
-        child: Container(
-          height: height,
-          width: width,
+      child: Container(
+        height: height,
+        width: width,
+
+        decoration: BoxDecoration(
           color: color,
-          child: Center(
-            child: Text(
-              text,
-              style: GoogleFonts.rubik(fontSize: fontSize, color: fontColor),
-            ),
+          borderRadius: BorderRadius.circular(12.0),
+          border: Border.all(color: Color(0xFF228B22), width: borderWidth),
+        ),
+        child: Center(
+          child: Text(
+            text,
+            style: GoogleFonts.rubik(fontSize: fontSize, color: fontColor),
           ),
         ),
       ),
