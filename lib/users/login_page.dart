@@ -269,6 +269,7 @@ class _LoginPageState extends State<LoginPage> {
                                         text: 'Sign In',
                                         fontSize: screenWidth * 0.036,
                                         color: Color(0xFF228B22),
+                                        fontColor: Color(0xFFFFFFFF),
                                       ),
                                     ],
                                   ),

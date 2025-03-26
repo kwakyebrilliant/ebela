@@ -8,16 +8,20 @@ class SmallButton extends StatelessWidget {
     this.text,
     this.color,
     this.fontSize,
-    this.size,
+    this.height,
+    this.width,
     this.fontColor,
+    this.borderSize,
   });
 
   final dynamic text;
   final dynamic function;
   final dynamic color;
   final dynamic fontSize;
-  final dynamic size;
+  final dynamic height;
+  final dynamic width;
   final dynamic fontColor;
+  final dynamic borderSize;
 
   @override
   Widget build(BuildContext context) {
@@ -26,9 +30,12 @@ class SmallButton extends StatelessWidget {
       child: ClipRRect(
         borderRadius: BorderRadius.circular(12.0),
         child: Container(
-          height: size,
-          width: size,
+          height: height,
+          width: width,
           color: color,
+          decoration: BoxDecoration(
+            border: Border.all(color: Color(0xFF228B22), width: borderSize),
+          ),
           child: Center(
             child: Text(
               text,
