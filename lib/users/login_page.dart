@@ -1,3 +1,4 @@
+import 'package:ebela/utility/buttons/small_button.dart';
 import 'package:ebela/utility/textformfield/mytextformfield.dart';
 import 'package:eva_icons_flutter/eva_icons_flutter.dart';
 import 'package:flutter/material.dart';
@@ -262,7 +263,14 @@ class _LoginPageState extends State<LoginPage> {
                                   child: Row(
                                     mainAxisAlignment:
                                         MainAxisAlignment.spaceBetween,
-                                    children: [],
+                                    children: [
+                                      // Sign in Button
+                                      SmallButton(
+                                        text: 'Sign In',
+                                        fontSize: screenWidth * 0.036,
+                                        color: Color(0xFF228B22),
+                                      ),
+                                    ],
                                   ),
                                 ),
                               ],
