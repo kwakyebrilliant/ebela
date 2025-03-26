@@ -158,13 +158,13 @@ class _LoginPageState extends State<LoginPage> {
                           ),
                         ),
 
-                        // use email to register
+                        // use email to login
                         Text(
-                          'or use email to register',
+                          'or use email to login',
                           style: TextStyle(
                             color: Color(0xFFFFFFFF),
                             // 4% of screen width
-                            fontSize: screenWidth * 0.04,
+                            fontSize: screenWidth * 0.036,
                           ),
                         ),
 
@@ -225,7 +225,7 @@ class _LoginPageState extends State<LoginPage> {
                                   ),
                                 ),
 
-                                // Row for Forgot Password
+                                // Row for Forgot Password and click here
                                 Row(
                                   children: [
                                     // Forgot Password text here
@@ -234,7 +234,18 @@ class _LoginPageState extends State<LoginPage> {
                                       style: TextStyle(
                                         color: Color(0xFFFFFFFF),
                                         // 4% of screen width
-                                        fontSize: screenWidth * 0.04,
+                                        fontSize: screenWidth * 0.036,
+                                      ),
+                                    ),
+
+                                    SizedBox(width: screenWidth * 0.01),
+
+                                    Text(
+                                      'Click Here',
+                                      style: TextStyle(
+                                        color: Color(0xFF228B22),
+                                        // 4% of screen width
+                                        fontSize: screenWidth * 0.036,
                                       ),
                                     ),
                                   ],
