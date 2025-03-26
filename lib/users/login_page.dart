@@ -255,8 +255,7 @@ class _LoginPageState extends State<LoginPage> {
                                 // Row for both sign in and sign up icons
                                 Padding(
                                   padding: EdgeInsets.only(
-                                    left: screenWidth * 0.08,
-                                    right: screenWidth * 0.08,
+                                    top: screenHeight * 0.03,
                                   ),
 
                                   // Row for both sign in and sign up icons
@@ -270,6 +269,8 @@ class _LoginPageState extends State<LoginPage> {
                                         fontSize: screenWidth * 0.036,
                                         color: Color(0xFF228B22),
                                         fontColor: Color(0xFFFFFFFF),
+                                        height: screenHeight * 0.056,
+                                        width: screenWidth * 0.35,
                                       ),
                                     ],
                                   ),

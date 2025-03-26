@@ -11,7 +11,6 @@ class SmallButton extends StatelessWidget {
     this.height,
     this.width,
     this.fontColor,
-    this.borderSize,
   });
 
   final dynamic text;
@@ -21,7 +20,6 @@ class SmallButton extends StatelessWidget {
   final dynamic height;
   final dynamic width;
   final dynamic fontColor;
-  final dynamic borderSize;
 
   @override
   Widget build(BuildContext context) {
@@ -33,17 +31,10 @@ class SmallButton extends StatelessWidget {
           height: height,
           width: width,
           color: color,
-          decoration: BoxDecoration(
-            border: Border.all(color: Color(0xFF228B22), width: borderSize),
-          ),
           child: Center(
             child: Text(
               text,
-              style: GoogleFonts.rubik(
-                fontSize: fontSize,
-                fontWeight: FontWeight.bold,
-                color: fontColor,
-              ),
+              style: GoogleFonts.rubik(fontSize: fontSize, color: fontColor),
             ),
           ),
         ),
