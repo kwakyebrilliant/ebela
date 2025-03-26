@@ -1,4 +1,5 @@
 import 'package:ebela/utility/textformfield/mytextformfield.dart';
+import 'package:eva_icons_flutter/eva_icons_flutter.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_keyboard_visibility/flutter_keyboard_visibility.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -15,6 +16,14 @@ class _LoginPageState extends State<LoginPage> {
   Widget build(BuildContext context) {
     double screenWidth = MediaQuery.of(context).size.width;
     double screenHeight = MediaQuery.of(context).size.height;
+
+    // list
+    final List<Map<String, dynamic>> iconList = [
+      {'name': 'gmail', 'icon': EvaIcons.email},
+      {'name': 'apple', 'icon': Icons.apple},
+      {'name': 'facebook', 'icon': EvaIcons.facebook},
+      {'name': 'linkedin', 'icon': EvaIcons.linkedin},
+    ];
 
     return KeyboardVisibilityBuilder(
       builder: (context, isKeyboardVisible) {
@@ -45,8 +54,8 @@ class _LoginPageState extends State<LoginPage> {
               children: [
                 // Padding around Stack
                 Padding(
-                  // 8% of screen height
-                  padding: EdgeInsets.only(top: screenHeight * 0.08),
+                  // 10% of screen height
+                  padding: EdgeInsets.only(top: screenHeight * 0.1),
 
                   // Stack here
                   child: Stack(
@@ -58,7 +67,7 @@ class _LoginPageState extends State<LoginPage> {
                             Icons.search,
                             // 40% of screen width
                             size: screenWidth * 0.4,
-                            color: Colors.white.withValues(alpha: 0.4),
+                            color: Color(0xFFFFFFFF).withValues(alpha: 0.4),
                           ),
                         ),
                       ),
@@ -74,7 +83,7 @@ class _LoginPageState extends State<LoginPage> {
                               style: GoogleFonts.inter(
                                 // 25% of screen width
                                 fontSize: screenWidth * 0.25,
-                                color: Colors.white,
+                                color: Color(0xFFFFFFFF),
                                 fontWeight: FontWeight.w800,
                                 letterSpacing: 0.3,
                               ),
@@ -98,7 +107,7 @@ class _LoginPageState extends State<LoginPage> {
                       children: [
                         // Padding around Welcome text here
                         Padding(
-                          padding: const EdgeInsets.all(8.0),
+                          padding: EdgeInsets.only(bottom: screenHeight * 0.03),
 
                           // Welcome text here
                           child: Text(
@@ -106,10 +115,46 @@ class _LoginPageState extends State<LoginPage> {
                             style: GoogleFonts.inter(
                               // 6% of screen width
                               fontSize: screenWidth * 0.06,
-                              color: Colors.white,
+                              color: Color(0xFFFFFFFF),
                               fontWeight: FontWeight.w600,
                               letterSpacing: 0.3,
                             ),
+                          ),
+                        ),
+
+                        // Padding around Row for alternative sign in
+                        Padding(
+                          padding: EdgeInsets.only(
+                            bottom: screenHeight * 0.03,
+                            left: screenWidth * 0.08,
+                            right: screenWidth * 0.08,
+                          ),
+
+                          // Row for icon list
+                          child: Row(
+                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                            children:
+                                iconList.map((list) {
+                                  return Container(
+                                    padding: EdgeInsets.all(10.0),
+                                    decoration: BoxDecoration(
+                                      borderRadius: BorderRadius.circular(
+                                        screenHeight * 0.5,
+                                      ),
+                                      border: Border.all(
+                                        color: Color(0xFF228B22),
+                                        width: screenWidth * 0.003,
+                                      ),
+                                    ),
+
+                                    // Icons here
+                                    child: Icon(
+                                      list['icon'],
+                                      size: screenWidth * 0.08,
+                                      color: Color(0xFFFFFFFF),
+                                    ),
+                                  );
+                                }).toList(),
                           ),
                         ),
 
@@ -117,7 +162,7 @@ class _LoginPageState extends State<LoginPage> {
                         Text(
                           'or use email to register',
                           style: TextStyle(
-                            color: Colors.white,
+                            color: Color(0xFFFFFFFF),
                             // 4% of screen width
                             fontSize: screenWidth * 0.04,
                           ),
@@ -160,7 +205,7 @@ class _LoginPageState extends State<LoginPage> {
                                 // Padding around Password TextFormField
                                 Padding(
                                   padding: EdgeInsets.only(
-                                    bottom: screenHeight * 0.02,
+                                    bottom: screenHeight * 0.03,
                                   ),
 
                                   // Password TextFormField
@@ -177,6 +222,36 @@ class _LoginPageState extends State<LoginPage> {
                                       }
                                       return null;
                                     },
+                                  ),
+                                ),
+
+                                // Row for Forgot Password
+                                Row(
+                                  children: [
+                                    // Forgot Password text here
+                                    Text(
+                                      'Forgot Your Password?',
+                                      style: TextStyle(
+                                        color: Color(0xFFFFFFFF),
+                                        // 4% of screen width
+                                        fontSize: screenWidth * 0.04,
+                                      ),
+                                    ),
+                                  ],
+                                ),
+
+                                // Row for both sign in and sign up icons
+                                Padding(
+                                  padding: EdgeInsets.only(
+                                    left: screenWidth * 0.08,
+                                    right: screenWidth * 0.08,
+                                  ),
+
+                                  // Row for both sign in and sign up icons
+                                  child: Row(
+                                    mainAxisAlignment:
+                                        MainAxisAlignment.spaceBetween,
+                                    children: [],
                                   ),
                                 ),
                               ],
