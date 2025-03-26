@@ -102,7 +102,7 @@ class _LoginPageState extends State<LoginPage> {
                     // Padding around column
                     child: Padding(
                       // 4% of screen height
-                      padding: EdgeInsets.only(top: screenHeight * 0.04),
+                      padding: EdgeInsets.only(top: screenHeight * 0.07),
 
                       // Column here
                       child: Column(
@@ -120,7 +120,7 @@ class _LoginPageState extends State<LoginPage> {
                                 // 6% of screen width
                                 fontSize: screenWidth * 0.06,
                                 color: Color(0xFFFFFFFF),
-                                fontWeight: FontWeight.w600,
+                                fontWeight: FontWeight.w800,
                                 letterSpacing: 0.3,
                               ),
                             ),
