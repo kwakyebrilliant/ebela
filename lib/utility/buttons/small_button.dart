@@ -9,6 +9,7 @@ class SmallButton extends StatelessWidget {
     this.color,
     this.fontSize,
     this.size,
+    this.fontColor,
   });
 
   final dynamic text;
@@ -16,6 +17,7 @@ class SmallButton extends StatelessWidget {
   final dynamic color;
   final dynamic fontSize;
   final dynamic size;
+  final dynamic fontColor;
 
   @override
   Widget build(BuildContext context) {
@@ -33,7 +35,7 @@ class SmallButton extends StatelessWidget {
               style: GoogleFonts.rubik(
                 fontSize: fontSize,
                 fontWeight: FontWeight.bold,
-                color: color,
+                color: fontColor,
               ),
             ),
           ),
