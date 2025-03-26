@@ -269,8 +269,20 @@ class _LoginPageState extends State<LoginPage> {
                                         fontSize: screenWidth * 0.036,
                                         color: Color(0xFF228B22),
                                         fontColor: Color(0xFFFFFFFF),
+                                        borderWidth: screenWidth * 0.005,
                                         height: screenHeight * 0.056,
-                                        width: screenWidth * 0.35,
+                                        width: screenWidth * 0.36,
+                                      ),
+
+                                      // Sign up Button
+                                      SmallButton(
+                                        text: 'Sign Up',
+                                        fontSize: screenWidth * 0.036,
+                                        color: Color(0xFFFFFFFF),
+                                        fontColor: Color(0xFF228B22),
+                                        borderWidth: screenWidth * 0.005,
+                                        height: screenHeight * 0.056,
+                                        width: screenWidth * 0.36,
                                       ),
                                     ],
                                   ),
